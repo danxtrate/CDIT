@@ -1,0 +1,20 @@
+### Authentication details
+
+export tenancy_ocid=ocid1.tenancy.oc1..aaaaaaaazwsbsxg5xztpihanpibg7fo37gfnx3hfo7htscyowwzm6qwjktfq
+
+#OCID and fingerprint for: terraform.user
+export user_ocid=ocid1.user.oc1..aaaaaaaamxnrtnehzfntqf6vnv4y7talx63jo6i5harvi44gjx24lizmn2qq
+export fingerprint=05:86:d2:f3:80:d7:bf:d8:c1:6c:15:3f:f4:1f:57:41
+export private_key_path=~/.oci/oci_api_key.pem
+
+### Region
+
+export region=uk-london-1
+### Compartment: CODE_Compartment
+export compartment_ocid=ocid1.compartment.oc1..aaaaaaaaz4l7lv724yruodxm23r4zemuzwcxtwno3qvamjpye6b4ovj7sa2q
+
+### Public/private keys used on the instance
+export ssh_public_key=$(cat ~/.ssh/secssh.pub)
+export ssh_private_key=$(cat  ~/.ssh/secssh)
+## NOTE: These are not your api keys. More info on the right keys see
+## https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/managingkeypairs.htm
