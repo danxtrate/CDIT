@@ -33,7 +33,7 @@ resource "oci_core_route_table" "RouteForPROD" {
 #Use IANA protocol numbers to describe protocols. Options are supported only for ICMP ("1"), TCP ("6"), and UDP ("17")
 resource "oci_core_security_list" "WEB_SecList" {
     compartment_id = "${var.compartment_ocid}"
-    display_name = "Public"
+    display_name = "WEB_Seclist"
     vcn_id = "${oci_core_virtual_network.PROD.id}"
     egress_security_rules = [{
         destination = "0.0.0.0/0"
@@ -65,7 +65,7 @@ resource "oci_core_security_list" "WEB_SecList" {
 #Use IANA protocol numbers to describe protocols. Options are supported only for ICMP ("1"), TCP ("6"), and UDP ("17")
 esource "oci_core_security_list" "LB_SecList" {
     compartment_id = "${var.compartment_ocid}"
-    display_name = "Public"
+    display_name = "LB_Seclist"
     vcn_id = "${oci_core_virtual_network.PROD.id}"
     egress_security_rules = [{
         tcp_options {
@@ -96,7 +96,7 @@ esource "oci_core_security_list" "LB_SecList" {
 #define Web Server subnets. Select one of three availability domains by using [0, 1, 2] in the "availabity_domain" line
 resource "oci_core_subnet" "WBA" {
   availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[0],"name")}" 
-  cidr_block = "${var.public_subnet_cidr}"
+  cidr_block = "${var.WBA_subnet_cidr}"
   display_name = "WBA"
   compartment_id = "${var.compartment_ocid}"
   vcn_id = "${oci_core_virtual_network.PROD.id}"
@@ -107,7 +107,7 @@ resource "oci_core_subnet" "WBA" {
 
 resource "oci_core_subnet" "WBB" {
   availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[1],"name")}" 
-  cidr_block = "${var.public_subnet_cidr}"
+  cidr_block = "${var.WBB_subnet_cidr}"
   display_name = "WBB"
   compartment_id = "${var.compartment_ocid}"
   vcn_id = "${oci_core_virtual_network.PROD.id}"
@@ -119,7 +119,7 @@ resource "oci_core_subnet" "WBB" {
 #define Load Balancer subnets. Select one of three availability domains by using [0, 1, 2] in the "availabity_domain" line
 resource "oci_core_subnet" "LBA" {
   availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[0],"name")}" 
-  cidr_block = "${var.public_subnet_cidr}"
+  cidr_block = "${var.LBA_subnet_cidr}"
   display_name = "LBA"
   compartment_id = "${var.compartment_ocid}"
   vcn_id = "${oci_core_virtual_network.PROD.id}"
@@ -130,7 +130,7 @@ resource "oci_core_subnet" "LBA" {
 
 resource "oci_core_subnet" "LBB" {
   availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[1],"name")}" 
-  cidr_block = "${var.public_subnet_cidr}"
+  cidr_block = "${var.LBB_subnet_cidr}"
   display_name = "LBB"
   compartment_id = "${var.compartment_ocid}"
   vcn_id = "${oci_core_virtual_network.PROD.id}"
