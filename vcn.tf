@@ -63,7 +63,7 @@ resource "oci_core_security_list" "WEB_SecList" {
 
 #define a security list for a Load Balancer Subnet. It allows ingress from the internet through port 80 and egress to the WebServer Subnets through port 80
 #Use IANA protocol numbers to describe protocols. Options are supported only for ICMP ("1"), TCP ("6"), and UDP ("17")
-esource "oci_core_security_list" "LB_SecList" {
+resource "oci_core_security_list" "LB_SecList" {
     compartment_id = "${var.compartment_ocid}"
     display_name = "LB_Seclist"
     vcn_id = "${oci_core_virtual_network.PROD.id}"
