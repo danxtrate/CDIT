@@ -13,6 +13,6 @@ resource "oci_core_instance" "WebServerA" {
 
   source_details {
     source_type = "image"
-    source_id   = "${var.InstanceImageOCID[var.region]}"
+    source_id   = "${var.InstanceImageOCID}"
   }
 }
