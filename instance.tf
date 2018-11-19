@@ -7,9 +7,9 @@ resource "oci_core_instance" "WebServerA" {
  # hostname_label      = "WebServerA"
 
 #use this to install httpd role
-#  metadata {
-#    user_data = "${base64encode(var.user-data)}"
-#  }
+  metadata {
+    user_data = "${base64encode(var.user-data)}"
+  }
 
   source_details {
     source_type = "image"
