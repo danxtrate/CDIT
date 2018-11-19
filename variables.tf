@@ -36,7 +36,7 @@ variable "InstanceShape" {
     default = "VM.Standard2.1"
 }
 
-#define the OCID of the image to be deployed, see https://docs.us-phoenix-1.oraclecloud.com/images/ --- adauga dupa pranz
+#define the OCID of the image to be deployed, see https://docs.us-phoenix-1.oraclecloud.com/images/ --- add just for the region used
 variable "InstanceImageOCID" {
-    default = "ocid1.image.oc1.uk-london-1.aaaaaaaa2ic2sii6eirqs2n2im7d6hlvft6gej7wiv6ea7e7psgecnufdaqq"
+    default = "ocid1.image.oc1.eu-frankfurt-1.aaaaaaaaitzn6tdyjer7jl34h2ujz74jwy5nkbukbh55ekp6oyzwrtfa4zma"
 }
