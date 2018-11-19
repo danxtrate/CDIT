@@ -1,8 +1,8 @@
 ### Authentication details
 
-export TF_VAR_tenancy_ocid=ocid1.tenancy.oc1..aaaaaaaazwsbsxg5xztpihanpibg7fo37gfnx3hfo7htscyowwzm6qwjktfq
+export TF_VAR_tenancy_ocid=ocid1.tenancy.oc1..aaaaaaaaef5npzgovq33b5ndlukdifsmjxqpq4dswrqmuzuhoa5kxamtt5qa
 
-#OCID and fingerprint for: ocid_apiuser
+#OCID and fingerprint for: ocidemo_apiuser
 export TF_VAR_user_ocid=ocid1.user.oc1..aaaaaaaagj2s4si6udge36zpkdxptksyegksnbrf2g2eeeg5q4jdahb4sw4a
 export TF_VAR_fingerprint=35:a6:5c:0d:a4:67:86:3b:50:bf:89:6b:46:2e:8f:89
 export TF_VAR_private_key_path=~/.oci/oci_api_key.pem
