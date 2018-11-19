@@ -14,7 +14,7 @@ export region=eu-frankfurt-1
 export compartment_ocid=ocid1.compartment.oc1..aaaaaaaaw6hndf3iq22gogq62wldsibcukawfdhvykukpb2ctqy257qykvza
 
 ### Public/private keys used on the instance
-export ssh_public_key=$(cat ~/.ssh/secssh.pub)
-export ssh_private_key=$(cat  ~/.ssh/secssh)
+export ssh_public_key=$(cat ~/.ssh/id_rsa.pub)
+export ssh_private_key=$(cat  ~/.ssh/id_rsa)
 ## NOTE: These are not your api keys. More info on the right keys see
 ## https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/managingkeypairs.htm
