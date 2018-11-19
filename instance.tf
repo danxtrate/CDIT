@@ -4,7 +4,7 @@ resource "oci_core_instance" "WebServerA" {
   display_name        = "WebServerA"
   shape               = "${var.InstanceShape}"
   subnet_id           = "${oci_core_subnet.WBA.id}"
-  hostname_label      = "WebServerA"
+ # hostname_label      = "WebServerA"
 
 #use this to install httpd role
 #  metadata {
